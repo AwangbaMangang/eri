@@ -3,7 +3,7 @@ async function fetchAndTranslate() {
   const outputDiv = document.getElementById('output');
   outputDiv.innerHTML = '<p>Fetching article...</p>';
 
-  const response = await fetch(https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&format=json&origin=*);
+  const response = await fetch(`https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&format=json&origin=*`);
   const data = await response.json();
 
   const html = data?.parse?.text['*'];
